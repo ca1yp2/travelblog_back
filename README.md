@@ -34,59 +34,31 @@ Spring Boot 3.4.6과 Java 17 기반의 여행 블로그 백엔드 서버입니�
 ## 📁 프로젝트 구조
 
 ```
-travelblog_back
+travelblog_back/
 ├── src/
 │    ├── main/
-│    │    ├── java/com/ca1yp2/backend/
-│    │    │     ├── component/
-│    │    │     │       └── JwtAuthenticationFilter.java
-│    │    │     ├── config/
-│    │    │     │      └── DotenvConfig.java
-│    │    │     ├── controller/
-│    │    │     │       ├── AdminController.java
-│    │    │     │       ├── MainController.java
-│    │    │     │       ├── PhotoController.java
-│    │    │     │       └── TravelController.java
-│    │    │     ├── dto/
-│    │    │     │    └── GuestBookDto.java
-│    │    │     ├── entity/
-│    │    │     │     ├── GuestBook.java
-│    │    │     │     ├── MyPhoto.java
-│    │    │     │     ├── PhotoCategory.java
-│    │    │     │     ├── PostImg.java
-│    │    │     │     ├── TravelPost.java
-│    │    │     │     └── User.java
-│    │    │     ├── repository/
-│    │    │     │        ├── GuestBookRepository.java
-│    │    │     │        ├── MyPhotoRepository.java
-│    │    │     │        ├── PhotoCategoryRepository.java
-│    │    │     │        ├── PostImgRepository.java
-│    │    │     │        ├── TravelPostRepository.java
-│    │    │     │        └── UserRepository.java
-│    │    │     ├── security/
-│    │    │     │       ├── JwtUtil.java
-│    │    │     │       └── SecurityConfig.java
-│    │    │     ├── service/
-│    │    │     │      ├── CaptchaService.java
-│    │    │     │      ├── FileService.java
-│    │    │     │      └── MyPhotoService.java
-│    │    │     └── BackendApplication.java
-│    │    ├── resources/
-│    │            ├── static
-│    │            │      └── upload
-│    │            ├── templates
-│    │            │
-│    │            └── application.yml
-│    └── test/
-├── .env
-├── .gitattributes
-├── .gitignore
-├── build.gradle
-├── gradlew
-├── gradelw.bat
-├── HELP.md
-├── README.md
-└── settings.gradle
+│    │    ├── java/com/ca1yp2/backend/   # 자바 소스 코드
+│    │    │     ├── component/            # 커스텀 컴포넌트 (예: JWT 필터)
+│    │    │     ├── config/               # 환경설정 클래스 (예: Dotenv 설정)
+│    │    │     ├── controller/           # REST API 컨트롤러 (관리자, 여행, 사진 등)
+│    │    │     ├── dto/                  # 데이터 전송 객체 (DTO)
+│    │    │     ├── entity/               # JPA 엔티티 (테이블 매핑)
+│    │    │     ├── repository/           # 데이터베이스 접근 레포지토리 (JPA 인터페이스)
+│    │    │     ├── security/             # 보안 관련 클래스 (JWT 유틸, 시큐리티 설정)
+│    │    │     ├── service/              # 비즈니스 로직 서비스
+│    │    │     └── BackendApplication.java  # 스프링 부트 메인 실행 클래스
+│    │    ├── resources/                  # 리소스 파일
+│    │    │     ├── static/upload/       # 업로드 파일 저장 폴더
+│    │    │     ├── templates/            # 템플릿 파일 (Thymeleaf 등)
+│    │    │     └── application.yml       # 애플리케이션 설정
+│    └── test/                           # 테스트 코드 및 리소스
+├── .env                                # 환경변수 설정 파일
+├── .gitignore                          # Git 무시 파일 목록
+├── build.gradle                        # Gradle 빌드 스크립트
+├── gradlew, gradlew.bat                # Gradle Wrapper 실행 파일
+├── HELP.md                            # 프로젝트 도움말
+├── README.md                          # 프로젝트 설명서
+└── settings.gradle                    # Gradle 설정 파일
 ```
 
 ---
